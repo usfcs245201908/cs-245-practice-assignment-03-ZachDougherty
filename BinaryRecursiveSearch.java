@@ -18,7 +18,7 @@ public class BinaryRecursiveSearch implements Practice03Search {
             mid = (low + high) / 2;
             if (arr[mid] == target) {
                 return mid;
-            } else if (mid > target) {
+            } else if (arr[mid] > target) {
                 high = mid -1;
                 return recSearch(arr, target, low, high);
             } else {

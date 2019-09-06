@@ -10,11 +10,11 @@ public class BinaryIterativeSearch implements Practice03Search {
         int low = 0;
         int high = arr.length-1;
         int mid;
-        while (low > high) {
+        while (low <= high) {
             mid = (low + high) / 2;
             if (arr[mid] == target) {
                 return mid;
-            } else if (mid > target) {
+            } else if (arr[mid] > target) {
                 high = mid - 1;
             } else {
                 low = mid + 1;
